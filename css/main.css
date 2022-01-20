@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Pangolin&display=swap');
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css");
+
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+
+:root {
+    --Negro: #3b4754;
+    --Rosa: #6b35e9;
+  }
+
+
+  
+  /* loader */
+  .loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+  }
+  .loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: relative;
+    border: 4px solid var(--Negro);
+    animation: loader 1s infinite ease;
+  }
+  
+  .loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    border-radius: 50%;
+    background-color: var(--Rosa );
+    animation: loader-inner 2s infinite ease-in;
+  }
+  
+  @keyframes loader {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes loader-inner {
+    0% {
+      height: 80%;
+    }
+  
+    25% {
+      height: 80%;
+    }
+  
+    50% {
+      height: 80%;
+    }
+  
+    75% {
+      height: 80%;
+    }
+  
+    100% {
+      height: 80%;
+    }
+  }
+
+  /* end loader */
+
+  /*nav bar */
+
+   
+.tam{
+  width: 50%;
+}
+
+
+
+
+   .img-logo{
+      
+    width: 10%;
+    
+       
+
+
+   }
+
+  .navbar { 
+ 
+  padding-top: 1.5rem;
+
+}
+
+  .navbar-nav .nav-link {
+    padding-left: 3rem !important; 
+}
+
+
+  /* end enavbar */
+ .titular {
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 72px);
+
+ }
+  .main-text {
+      position: relative;
+     
+  }
+  .sub-text {
+      font-family: 'Pangolin', sans-serif;
+      color: var(--Rosa);
+      font-size: 4rem;
+  }
+  .sub-p {
+      font-size: 0.8rem;
+      color: rgb(59, 59, 59);
+  }
+
+  .boton-comenzar {
+      width: 10rem;
+      height: 2.5rem;
+      background-color: #f7f7f7;
+      color: var(--Rosa);
+      border-radius: 5px;
+      box-shadow: 0px 5px 5px rgba(104, 14, 122, 0.69);
+  }
+
+  .section-title{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    color: rgb(94, 34, 190);
+    height: 2rem;
+    margin-top: 20px;
+    padding-bottom: 4rem;
+
+}
+
+/* header img */
+
+.img-dec{
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+  /* beneficios */ 
+
+  .beneficios {
+      height: 40vh;
+      padding-bottom: 2rem;
+  }
+
+  
+  .bi.bi-house-door{
+    font-size: 3em;
+    
+  }
+  .bi.bi-book{
+    font-size: 3em;
+  }
+   
+  .bi-bar-chart{
+    font-size: 3em;
+  }
+
+  /* end beneficios */
+
+  /* blog section */
+
+    .section-title2{
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    color: rgb(94, 34, 190);
+    
+    height: 2rem;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    }
+     .card-title{
+       font-family:fantasy ;
+       margin-bottom:40px;
+     }
+    .card-text{
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+           
+  /*    ends blog section*/
+    
+
+/* Footer  */
+
+.footerr{
+  height: 25px;
+  background-color: #6b35e9;
+}
+.p-pos{
+  font-family: fantasy;
+  color: black;
+  margin-top: 30px;
+  align-items: center;
+  text-align: center;
+
+}

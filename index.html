@@ -1,237 +1,224 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device, user-scable=no,initial-scale=1.0,maximun-scale=1.0,minimum-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="estilos.css">
-    <link rel="icon" type="image/png" href="tacos.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@313;600&family=Scheherazade+New&display=swap" rel="stylesheet">
-    <title>Tacos Mexicanos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qchess</title>
+    <link  rel="icon" type="image/png" href="img/logoi.jpg">
+
+<!-- Bootstrap Css -->
+
+<link
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+rel="stylesheet"
+integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+crossorigin="anonymous" />
+
+<!-- Css -->
+
+<link rel="stylesheet" href="css\main.css" />
+
+<!-- Bootstrap Js -->
+
+<script defer
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+	crossorigin="anonymous"></script>
+
+<!-- Jquery -->
+
+<script defer src="https://code.jquery.com/jquery-3.6.0.min.js"
+integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+crossorigin="anonymous"></script>
+
+<!-- Js -->
+
+<script defer src="js\script.js"></script>
+
+
 </head>
 <body>
+    <div class="loader-wrapper">
+		<span class="loader"><span class="loader-inner"></span></span>
+	</div>
     
-    <header>
-        <h1 class="main-title">Tacos Mexicanos</h1>
-    </header>
-    </div>
-   
-    <nav class="nav">
-        
-        <ul>
-            <li>
+    <div class="modal" id="exampleModal" tabindex="-1"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog  modal-sm">
+			<div class="modal-content">
+				<div class="modal-header">
+					<p class="modal-title pe-1" id="exampleModalLabel">Hola
+						Visitante!</p>
+					<span><svg xmlns="http://www.w3.org/2000/svg" width="22"
+							height="22" fill="currentColor" class="bi bi-person-fill"
+							viewBox="0 0 16 16">
+            <path
+								d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+          </svg></span>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"
+						aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<form action="login" method="post">
+
+						<div class="mb-3">
+							<label for="username" class="form-label">Usuario</label> <input
+								class="form-control" name="username">
+						</div>
+
+						<div class="mb-3">
+							<label for="password" class="form-label">Contraseña</label> <input
+								type="password" class="form-control" name="password">
+						</div>
+
+						<div class="d-grid gap-2">
+							<button type="submit" class="btn boton-iniciarS">Iniciar
+								Sesión</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <div class="container">
+        <header class="header">
+
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                  <div class="tam">
+                  <a class="navbar-brand" href="index.html"> <img class="img-logo" src="img/logoi.jpg" alt="">CHESS</a>
                 
-                <a href="">Inicio</a>
-            </li>
-            <li>
-                <a href="contactos.html" target="_blank">Contactos </a>
-            </li>
-            <li>
-                <a href="https://cursos-distancia.com.uy/curso/area-gastronomia/curso-de-gastronomia/curso-de-gastronomia.html?gclid=Cj0KCQjw18WKBhCUARIsAFiW7JxZO_Vivv_r91rIVPPH4eteBQitgtxzd8Pa798pt1UHowQLnVOabOsaAgbNEALw_wcB" target="_blank">Cursos</a>
-            </li>
-            <li>
-                <a href="https://www.pequerecetas.com/receta/receta-de-tacos-mexicanos-caseros/" target="_blank">Más Recetas</a>
-            </li>
-        </ul>
-    </nav>
+                </div>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ms-auto">
+                      <a class="nav-link active" href="#">Inicio</a>
+                      <a class="nav-link active" href="https://www.udemy.com/course/ajedrez-desde-cero/?utm_source=adwords&utm_medium=udemyads&utm_campaign=LongTail_la.ES_cc.LATAM&utm_term=_._ag_121424001739_._ad_515898216176_._kw__._de_c_._dm__._pl__._ti_dsa-1237025622652_._li_20011_._pd__._&matchtype=&gclid=Cj0KCQiAip-PBhDVARIsAPP2xc3n3tKFT9EfM2dObiLds6S-4eI6ixOvFPITgfriQegv29u_IfF45UYaAgxGEALw_wcB" target="_blank">Cursos</a>
+                      <a class="nav-link active" href="https://www.chess.com/es/lessons" target="_blank">Suscribete</a>
+                      <a class="nav-link active" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Contáctanos</a>
+                      
+                    </div>
+                  </div>
+                </div>
+              </nav>
 
 
-
-
-    <main>
-        <section class="cajapadre">
-           <article class="art-decoration">
-            
-            <div class="cuadrado">
-                <h3 >Un poco de Historia </h3>
-                
-                
-
-                El primer registro histórico conocido de una taquiza es el de la realizada por Hernán Cortés y sus hombres en Coyoacán,12​13​ para celebrar la caída de México-Tenochtitlan, y fue documentada por Díaz del Castillo en el Códice Florentino.
+        <section class="row titular">
+            <div class="col-4">
+                <h1 class="main-text">Aprende ajedrez
+                desde nuevas <span class="sub-text">perspectivas</span>
+                </h1>
+                <p class="sub-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore dolor itaque nulla adipisci magni autem?</p>
+                <a class="btn boton-comenzar" href="#">COMENZAR</a>
             </div>
-            <div class="cuadrado">
-                El nacimiento del taco proviene de las tortillas con mole prehispánicas, que eran preparadas sobre piedras calientes y decoradas con cochinilla, algunas de ellas acompañadas de frijol y chile, ingredientes que todavía constituyen la base alimenticia del pueblo mexicano. El guiso que se le ponía en ese entonces al taco, se basaba en la carne que se consumía durante esa época.
-            </div>
-            <div class="cuadrado">
-                La comida mexicana se basaba en el guajolote (como se llama al pavo en el Centro de México), ya que era la única ave domesticada. También había perros sin pelo (Xoloitzcuintle) que se cebaban para el consumo. Su carne era menos estimada que la del guajolote.
-            </div>
-       
+                <div class="col-8">
+                    <!-- aca va la img -->
+                    <img class="img-dec"   src="img/header-img.png" alt="">
+                </div>
            
-           </article>
 
-           <article class="art-decoration1">
-           <div class="positions">
-            <h3> 🌮Ingredientes🌮</h3>
-            <ul class="ul-deco">
-                <li>500 g de carne picada de ternera</li> 
-                <li> 1 cebolla pequeña</li>
-                <li>1 chile verde fresco o serrano (puedes comprar chiles serranos toreados )</li>
-                <li>2 dientes de ajo</li>
-                <li>1 cucharada de comino en polvo (puedes comprar aquí)</li>
-                <li>1/2 cucharadita (o al gusto) de chile seco (puedes comprar aquí)</li>
-                <li>1 cucharada de orégano</li>
-                <li>aceite de oliva</li>
-                <li>el zumo de 1/2 lima</li>
-                <li>sal</li>
-                <li>cilantro</li>
-                <li>8-1o tortillas de maíz (puedes comprar aquí)</li>
-           
-               </ul>
-            </div>
-            <div class="positions" >
-                <h3>🌮Pasos a seguir🌮</h3>
-    <ol class="ul-deco">
-        <li>Preparar el relleno</li>
-        <li>Picar la cebolla, el chile fresco, el cilantro y el ajo por separado y reservar.</li>
-        <li>Calentar 2 o 3 cucharadas de aceite en una sartén y sofreír con el orégano, el comino y el chile seco, unos dos minutos hasta que empiece a soltar aroma.</li>
-        <li>Añadir el ajo y el chile y sofreír 2 o 3 minutos más.</li>
-        <li>Añadir la carne, salar y remover, y dejar cocinar hasta que la carne esté hecha, unos 10 minutos.</li>
-        <li>Apagar el fuego, añadir el cilantro picado y el zumo de lima y remover.</li>
-
-    </ol>
-            </div>
-            </article>
-            
         </section>
+        </header>
 
-        <hr class="hr"> 
+        <section class="row beneficios text-center">
+            <h2 class="section-title ">Beneficios</h2>
+            <div class="col-sm">
+                <div class="card  align-items-center">
+                    <i class="bi bi-house-door"></i>
+                    <div class="card-body text-center">
+                        <p class="card-text">Comodidad</p>
+                      <p class="card-text sub-p">Entrena desde tu casa de forma virtual; con los mejores coaches de todo el mundo</p>
+                    </div>
+                  </div>
+            </div>
+            
+            <div class="col-sm"><div class="card align-items-center">
+            
+                <i class="bi bi-book"></i>
+                <div class="card-body text-center">
+                  
+                    <p class="card-text">Aprendizaje</p>
+                  <p class="card-text sub-p">La biblioteca físico/virtual más grande ofrece  conocimientos de los módulos más avanzados</p>
+                </div>
+              
+              </div></div>
+            <div class="col-sm"><div class="card align-items-center">
+                <i class= "bi-bar-chart"></i>
+                <div class="card-body text-center">
+                    <p class="card-text">Rendimiento</p>
+                  <p class="card-text sub-p">Evidencia neurocientífica apoya que el ajedrez mejora el rendimiento académico en la escuela.</p>
+                </div>
+              
+              </div></div>
+        </section>
+        <section class="blog">
+            <h3 class="section-title2">Te podría interesar</h3>
 
-        <section class="cajapadre2">
-            <article class="art-decoration2">
-                <div class="back">
-                <h3>🌮Para servir🌮</h3>
-                <p >
+            <div class="card mb-4">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="img/niña.jpg" class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Ajedrez en las escuelas</h5>
+                      <p class="card-text">Las áreas más beneficiadas parecen ser las matemáticas y la lectura. Para validar lo anterior se describen diversos trabajos científicos que muestran la activación cerebral a través de imágenes de resonancia magnética cuando los jugadores de ajedrez novatos, intermedios o avanzados practican este juego. Con base en ello se sugiere usar el ajedrez como una herramienta que permita la mejora del rendimiento escolar en niños y niñas...</p>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-4">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="img/gambito.jpg" class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Gámbito de dama: el impacto de la...</h5>
+                      <p class="card-text">A solo un mes de su estreno, la producción protagonizada por Anya Taylor-Joy figura como la más reproducida en el servicio de streaming. Junto con ello, las ventas de tableros de ajedrez aumentaron hasta en un 1.080%, mientras que las membresías en clubes de juego y las partidas en línea también van al alza... </p>
+                     
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-4">
+                <div class="row g-0">
+                  <div class="col-md-4">
                     
-            
-                    Calentar las tortillas en el horno por 1 o 2 minutos, solo se tienen que calentar. 
-                    También podéis dorarlas un poco como hemos visto antes (colgadas de la rejilla) si queréis que queden crujientes.
-                    <br>
-                    Rellenar con la carne y servir llevando a la mesa los ingredientes para acompañar por separado, para que cada uno se prepare su taco como prefiera.
-                   
-                </p>
-            </div>
-        <div class="back">
-                <h3>DATOS CURIOSOS</h3>
-                <p>
-                    1. En México se comen en promedio 60 kilos de tortillas al año… ¡por persona!
-                    <br>
-              2. Un astronauta incluyó a la tortilla en el menú del transbordador espacial Discovery, en 1998.
-              <br>
-               3. El taco es tan apreciado y famoso en el mundo, que hasta tiene su Día Mundial del Taco, que se celebra todos los 31 de marzo desde 1997.
-               <br>
-                4. El record Guiness del taco más grande del mundo lo tiene la ciudad de Guadalajara, donde se utilizaron 200 kilos de Cochinita Pibil y 44 mil tortillas.
-                <br>
-                 5. Mientras que el récord al taco más largo del mundo lo tiene Querétaro, con un taco que midió 75 metros y que estaba relleno de carnitas.
-                </p>
-            </div>
-            
-            </article>
-            <article class="art-decoration2-5">
-                <img  class="imgsize"
-                src="https://tacos10.com/storage/2018/12/tacos-mexicanos-de-carne.jpg"  alt="" srcset="">
-            </article>
-        </section>
-        <hr class="hr">
-        <section class="cajapadre3">
-            <article class="art-decoration3">
+                    <img src="img/judit.jpg" class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-md-8">
 
-            <h3>Tacos de pollo</h3>
-            <a href="https://www.cucinare.tv/receta/tacos-mexicanos/?gclid=Cj0KCQjwtMCKBhDAARIsAG-2Eu_touVu40X2fATYIkEeNJJHccs_OGDbAShsqZIxKUpcrR-5mX_GnAIaAgCLEALw_wcB" target="_blank">
-             <img class="imgsize2" src="https://www.paulinacocina.net/wp-content/uploads/2020/01/tacos-meat-food-mexican-lunch-dinner-800x600.jpg" alt="" srcset=""></a>
-            
-            </article>
-            <article class="art-decoration3">
-                <h3>🌮SALSAS PARA LOS TACOS🌮</h3>
-    
-    <iframe class="imgsize2" width="300" height="200" src="https://www.youtube.com/embed/a8yhZzXTb2c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-            </article>
-            
-            <aside class="art-decoration3">
-                <h3>Tacos de Bondiola</h3>
-                <a href="https://www.eldestapeweb.com/sociedad/recetas-de-cocina/receta-de-cocina-mexicanas-nachos-tacos-y-burritos-2020111714360?gclid=Cj0KCQjwtMCKBhDAARIsAG-2Eu_dq-sGwU5nzvQUd9krnFwdi_vUecYmKmwO4r36PCVjn72eUyrPvYQaAiq7EALw_wcB" target="_blank">
-<img  class="imgsize2"
-src="https://i.blogs.es/728280/tacos/1366_2000.jpg"alt="" ></a>
-            </aside>
-        </section>
-        <hr class="hr">
-        <section >
-           <div class="containerr">
-            <h3>🌮Comida originaria de Mexico🌮</h3>
-            <iframe class="map-position" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15005242.976467678!2d-97.20137864879234!3d23.33790293385313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1629944418767!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-           </div>
-
-        </section>
-        <hr class="hr">
-        <section>
-            <div class="contenedor">
-                <div class="row">
-               <div class=" col-sm-12 col-md-6 col-lg-3">
-            <div class="card">
-                <img src="img/tacos1.jpeg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">TACOS ESPAÑONES</h5>
-                  <p class="card-text">Ya iba con la idea de que no me iban a quedar igual, porque tienen un gusto muy distintivo. </p>
-                  <a href="#" class="btn btn-primary">Click Aquí</a>
+                      
+                    <div class="card-body">
+                          
+                      <h5 class="card-title">La reina del ajedrez: Beth Harmon de la vida real</h5>
+                      <p class="card-text">Judit Polgár (Budapest, Hungría, 23 de julio de 1976) es una ajedrecista húngara ya retirada, considerada la mejor jugadora de ajedrez de la historia. En 1991 obtuvo el título de Gran Maestro Internacional a la edad de 15 años y cuatro meses, convirtiéndose en su momento en la persona más joven en obtenerlo, rompiendo el récord que ostentaba anteriormente el ex Campeón del Mundo Bobby Fischer... </p>
+                 
+                    </div>
+                 
+                  </div>
+               
                 </div>
               </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-3">
-              <div class="card">
-                <img src="img/tacos2.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">TACOS RUSOS</h5>
-                  <p class="card-text">¿Qué es un taco árabe? Es una tortilla de harina de trigo (llamada pan árabe) que es más grande y  </p>
-                  <a href="#" class="btn btn-primary">Click Aquí</a>
+              
+                  
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-3">
-              <div class="card">
-                <img src="img/tacos3.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">TACOS ÁRABES</h5>
-                  <p class="card-text">El taco es una preparación culinaria muy popular en México que consiste en una tortilla..  </p>
-                  <a href="#" class="btn btn-primary">Click Aquí</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-3">
-              <div class="card">
-                <img src="img/tacos4.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">TACOS CHINOS</h5>
-                  <p class="card-text">Los tacos son un alimento típico mexicano y están compuestos básicamente de dos elementos: </p>
-                  <a href="#" class="btn btn-primary">Click Aquí</a>
-                </div>
-              </div>
-             </div>
-           </div>
-
-
-
-
-
-
-
         </section>
-        <footer>
-            <div id="copyright"
-            class="text-decoration">
-            © UNTITLED. ALL RIGHTS RESERVED | DESIGN BY 
-            <a href="https://github.com/isaiasdemaurizio" target="_blank" rel="nofollow">ISAIASDEMAURIZIO.</a>
-        </div>
-        </footer>
-    </main>
+    </div>
 
-
-
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <footer class="footerr">
+      <p class="p-pos">
+        © UNTITLED. ALL RIGHTS RESERVED 
+      </p>
+      
+    </footer>
 </body>
 </html>
